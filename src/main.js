@@ -1,8 +1,7 @@
 import LinkStations from "./LinkStations/LinkStations"
+import PredefinedPoints from "./PredefinedPoints/PredefinedPoints";
 
 function main(){
-
-    // load points
 
     // run algorithm on arrays, return results in array?
 
