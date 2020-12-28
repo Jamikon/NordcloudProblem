@@ -27,6 +27,7 @@
   },
   "type": "module",
   "jest": {
+    "verbose": true,
     "transform": {},
     "testEnvironment": "jest-environment-jsdom-sixteen"
   }
