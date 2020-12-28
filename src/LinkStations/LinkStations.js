@@ -1,6 +1,4 @@
-
-// [... [x coord, y coord, r reach], ...]
-export var LinkStations = [
+export default [
     [0, 0, 10],
     [20, 20, 5],
     [10, 0, 12]
