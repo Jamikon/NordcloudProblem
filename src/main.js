@@ -1,6 +1,6 @@
-function main(){
+import LinkStations from "./LinkStations/LinkStations"
 
-    // load LinkStations
+function main(){
 
     // load points
 
