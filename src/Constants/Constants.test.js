@@ -118,5 +118,12 @@ describe("Power constant", () => {
 describe("Reach constant", () => {
     test("invalid input throws", () => {
         expect(() => {reach(undefined)}).toThrowError("invalid LinkStation")
+    });
+    test("correct reach is returned", () => {
+        let testLinkStation = [0,1,2];
+        let returnedValue = reach(testLinkStation);
+        expect(returnedValue).toBe(testLinkStation[2]);
     })
-})
+
+
+});
