@@ -19,18 +19,14 @@ const distance = (Point, LinkStation) => {
 
     if (!Point || !LinkStation) throw Error("invalid Point or LinkStation");
 
-    if (Point.length !== 2 || LinkStation.length !== 3) throw Error("invalid input. Point or LinkStation too short");
+    if (Point.length !== 2 || LinkStation.length !== 3) throw Error("invalid Point or LinkStation length");
 
-    let [AX, AY, BX, BY] = [...Point, ...LinkStation];
-    if (!AX || !AY || !BX || !BY) throw Error("invalid input for either Point or LinkStation");
+    let [AX, AY, BX, BY, R] = [...Point, ...LinkStation];
 
-    if (
-        [AX, AY, BX, BY].map(
-            (item) => {
-                if (typeof item !== "number") throw Error(`invalid input. Expected type number, but got type ${typeof item}`);
-            }
-        )
-    )
+    // check all items are numbers
+    for (let component of [AX, AY, BX, BY, R]){
+        if (typeof component !== "number") throw Error("invalid input type")
+    }
 
     return Math.sqrt(
         (((AX - BX)**2) + ((AY - BY)**2))
