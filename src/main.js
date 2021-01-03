@@ -8,9 +8,6 @@ function main(){
     // print results using logger
 
     // terminate
-
-    console.log(123)
-
 }
 
 main();
