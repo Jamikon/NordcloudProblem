@@ -4,8 +4,11 @@
   "description": "This is an interpretation of the problem proposed by Nordcloud to calculate the most suitabe 'link station'\r for any given point.\r This link station should have the highest possible power as per specifications.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "start": "npm run compile && node ./babel_compiled/main.js",
+    "test": "npm run env:test && jest",
+    "start": "npm run compile && cross-env NODE_ENV=dev node ./babel_compiled/main.js",
+    "env:dev": "cross-env NODE_ENV=dev",
+    "env:test": "cross-env NODE_ENV=test",
+    "env:production": "cross-env NODE_ENV=production",
     "compile": "echo using babel to compile code... &&  babel src --out-dir babel_compiled"
   },
   "repository": {
@@ -21,8 +24,10 @@
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "babel-jest": "^26.6.3",
+    "cross-env": "^7.0.3",
     "jest": "^26.6.3"
   }
 }
