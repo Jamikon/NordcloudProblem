@@ -161,28 +161,27 @@ describe("Distance constant", () => {
     let validPoint = [1,2];
 
     describe("Point...", () => {
-        describe("invalid", () => {
-            describe("invalid input", () => {
-                test("undefined input throws", () => {
-                    expect(()=>distance(undefined, validLinkStation)).toThrowError("invalid Point or LinkStation")
-                })
-            });
-            describe("invalid length", () => {
-                let testObject = [];
+        describe("invalid input", () => {
+            test("undefined input throws", () => {
+                expect(()=>distance(undefined, validLinkStation)).toThrowError("invalid Point or LinkStation")
+            })
+        });
+        describe("invalid length", () => {
+            let testObject = [];
 
-                // too short
-                for (let max = 2, i = 0; i < max; i++){
-                    test(`length ${i} throws`, ()=>{
-                        expect(()=>{distance(testObject, validLinkStation)}).toThrowError("invalid Point or LinkStation length")
-                    });
-                }
+            // too short
+            for (let max = 2, i = 0; i < max; i++){
+                test(`length ${i} throws`, ()=>{
+                    expect(()=>{distance(testObject, validLinkStation)}).toThrowError("invalid Point or LinkStation length")
+                });
+            }
 
-                // too long
-                test("length 3 throws", () => {
-                    expect(()=>{distance([1,2,3], validLinkStation)}).toThrowError("invalid Point or LinkStation length");
-                })
-            });
-            describe("invalid array items", () => {
+            // too long
+            test("length 3 throws", () => {
+                expect(()=>{distance([1,2,3], validLinkStation)}).toThrowError("invalid Point or LinkStation length");
+            })
+        });
+        describe("invalid array items", () => {
                 test(`item 1 = undefined throws`, () => {
                     expect(() => {distance([undefined, 2], validLinkStation)}).toThrowError("invalid input type");
                 });
@@ -190,33 +189,30 @@ describe("Distance constant", () => {
                     expect(() => {distance([1, undefined], validLinkStation)}).toThrowError("invalid input type");
                 });
             });
-        });
-
     });
 
     describe("LinkStation...", () => {
-        describe("invalid", () => {
-            describe("invalid input", () => {
-                test("undefined input throws", () => {
-                    expect(()=>distance(validPoint, undefined)).toThrowError("invalid Point or LinkStation")
-                })
-            });
-            describe("invalid length", () => {
-                let testObject = [];
+        describe("invalid input", () => {
+            test("undefined input throws", () => {
+                expect(()=>distance(validPoint, undefined)).toThrowError("invalid Point or LinkStation")
+            })
+        });
+        describe("invalid length", () => {
+            let testObject = [];
 
-                // too short
-                for (let max = 3, i = 0; i < max; i++){
-                    test(`length ${i} throws`, ()=>{
-                        expect(()=>{distance(validPoint, testObject)}).toThrowError("invalid Point or LinkStation length")
-                    });
-                }
+            // too short
+            for (let max = 3, i = 0; i < max; i++){
+                test(`length ${i} throws`, ()=>{
+                    expect(()=>{distance(validPoint, testObject)}).toThrowError("invalid Point or LinkStation length")
+                });
+            }
 
-                // too long
-                test("length 4 throws", () => {
-                    expect(()=>{distance(validPoint, [1,2,3,4])}).toThrowError("invalid Point or LinkStation length");
-                })
-            });
-            describe("invalid array items", () => {
+            // too long
+            test("length 4 throws", () => {
+                expect(()=>{distance(validPoint, [1,2,3,4])}).toThrowError("invalid Point or LinkStation length");
+            })
+        });
+        describe("invalid array items", () => {
                 test(`item 0 = undefined throws`, () => {
                     expect(() => {distance(validPoint, [undefined, 2, 3])}).toThrowError("invalid input type");
                 });
@@ -227,13 +223,13 @@ describe("Distance constant", () => {
                     expect(() => {distance(validPoint, [1,2, undefined])}).toThrowError("invalid input type");
                 });
             });
-        });
-
     });
 
     describe("Both Point & Linkstation...", () => {
-        describe("invalid input", () => {
-
+        test("valid input returns correct output", () => {
+            expect(distance([1,1],[2,2,2])).toBe(
+                Math.sqrt(((1-2)**2)+((1-2)**2))
+            )
         })
     });
 });
