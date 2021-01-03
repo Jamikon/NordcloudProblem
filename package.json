@@ -9,7 +9,7 @@
     "env:dev": "cross-env NODE_ENV=dev",
     "env:test": "cross-env NODE_ENV=test",
     "env:production": "cross-env NODE_ENV=production",
-    "compile": "echo using babel to compile code... &&  babel src --out-dir babel_compiled"
+    "compile": "babel src --out-dir babel_compiled"
   },
   "repository": {
     "type": "git",
