@@ -9,7 +9,8 @@
     "env:dev": "cross-env NODE_ENV=dev",
     "env:test": "cross-env NODE_ENV=test",
     "env:production": "cross-env NODE_ENV=production",
-    "compile": "babel src --out-dir babel_compiled"
+    "compile": "babel src --out-dir babel_compiled",
+    "lambda:export": "babel index.js --out-dir babel_compiled && npm run compile"
   },
   "repository": {
     "type": "git",
