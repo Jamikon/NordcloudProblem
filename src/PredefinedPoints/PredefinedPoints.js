@@ -1,4 +1,4 @@
-export default [
+module.exports = [
     [0,0],
     [100,100],
     [15,10],

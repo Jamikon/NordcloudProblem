@@ -1,4 +1,4 @@
-import main from "./src/main";
+let main = require( "./src/main");
 
 exports.handler = async (event) => {
 

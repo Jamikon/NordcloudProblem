@@ -1,6 +1,6 @@
-import LinkStations from "./LinkStations/LinkStations"
-import PredefinedPoints from "./PredefinedPoints/PredefinedPoints";
-import getLinkStationPower from "./LinkStations/getLinkStationPower";
+let LinkStations = require( "./LinkStations/LinkStations");
+let PredefinedPoints = require( "./PredefinedPoints/PredefinedPoints");
+let getLinkStationPower = require("./LinkStations/getLinkStationPower");
 
 function getBestLinkStation(Point, LinkStations){
 
@@ -84,4 +84,4 @@ function main(points = PredefinedPoints, linkStations = LinkStations) {
 
 main();
 
-export default main;
+module.exports =  main;

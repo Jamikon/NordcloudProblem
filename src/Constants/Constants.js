@@ -33,4 +33,4 @@ const distance = (Point, LinkStation) => {
     )
 };
 
-export {power, reach, distance};
+module.exports = {power, reach, distance};

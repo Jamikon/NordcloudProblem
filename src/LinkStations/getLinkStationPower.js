@@ -1,4 +1,4 @@
-import {power, reach, distance} from "../Constants/Constants"
+let {power, reach, distance} = require( "../Constants/Constants")
 
 let getLinkStationPower = (Point, LinkStation) => {
     if (!Point) throw Error("invalid Point");
@@ -24,4 +24,4 @@ let getLinkStationPower = (Point, LinkStation) => {
 
 };
 
-export default getLinkStationPower;
+module.exports = getLinkStationPower;
