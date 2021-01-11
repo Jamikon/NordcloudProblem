@@ -9,13 +9,7 @@
     "env:dev": "cross-env NODE_ENV=dev",
     "env:test": "cross-env NODE_ENV=test",
     "env:production": "cross-env NODE_ENV=production",
-    "compile": "babel src --out-dir babel_compiled/src",
-    "lambda:export": "babel index.js --out-dir babel_compiled && npm run compile",
-    "delete:exports": "RD /S babel_compiled",
-    "parcel:build:main": "parcel build ./src/main.js",
-    "parcel:build:lambda": "parcel build  ./src/*/** index.js",
-    "parcel:clear": "RD /S /Q dist",
-    "build:lambda": "google-closure-compiler --compilation_level=bundle --dependency_mode=PRUNE_LEGACY --js=index.js --js=src/** --js_output_file=out.js"
+    "compile": "babel src --out-dir babel_compiled/src"
   },
   "repository": {
     "type": "git",
