@@ -1,7 +1,7 @@
 **/*.test.*
-/node_modules
-/.github
-/babel_compiled
+/node_modules/**/*
+/.github/**/*
+/babel_compiled/**/*
 jest.config.js
 .gitignore
 babel.config.json
