@@ -19,6 +19,22 @@ To get the required outpot logged to the console, simply use `npm start` and it 
 the predefined Points and LinkStations as per requirements. Try `npm run start` if the previous 
 command is not working.
 
+## In the Cloud
+a basic js version of this project is uploaded to AWS Lambda, and can be invoked by a query to `https://nn3gov55f7.execute-api.ap-southeast-2.amazonaws.com/live_demo/demo/calculate`
+
+This will take as input a JSON object with the following in the Body of the request:
+* 1: Nothing
+* 2: LinkStations (array of LinkStations)
+* 3: Points (array of Points)
+* 4: 2 arrays of arrays of LinkStations and Points respectively
+
+i.e. Body = 
+`{
+   "Points": [ [ 0, 1 ] ],
+   "LinkStations": [ [5,5,100] ]
+ }`
+
+
 ## Testing
 use `npm test` or `npm run test` to run all tests. Testing is done with the Jest package.
 
