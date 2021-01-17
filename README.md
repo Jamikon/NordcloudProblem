@@ -1,7 +1,6 @@
-![Tests](https://github.com/Jamikon/NordcloudProblem/workflows/Node.js%20CI%20(test)/badge.svg)
-![Lints](https://github.com/Jamikon/NordcloudProblem/workflows/Node.js%20CI%20(lint)/badge.svg)
-![Build](https://github.com/Jamikon/NordcloudProblem/workflows/Node.js%20CI%20(build)/badge.svg)
-
+![Testing](https://github.com/Jamikon/NordcloudProblem/workflows/Testing/badge.svg)
+![Linting](https://github.com/Jamikon/NordcloudProblem/workflows/Linting/badge.svg)
+![Build](https://github.com/Jamikon/NordcloudProblem/workflows/Build/badge.svg)
 # This is a possible solution to the tech problem proposed by Nordcloud.
 
 # Installation
