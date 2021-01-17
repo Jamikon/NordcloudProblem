@@ -1,0 +1,10 @@
+**/*.test.*
+/node_modules/**/*
+/.github/**/*
+/babel_compiled/**/*
+jest.config.js
+.gitignore
+babel.config.json
+package.json
+package-lock.json
+README.md
