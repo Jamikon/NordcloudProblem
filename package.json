@@ -10,8 +10,8 @@
     "env:test": "cross-env NODE_ENV=test",
     "env:production": "cross-env NODE_ENV=production",
     "compile": "babel src --out-dir babel_compiled",
-    "lint": "eslint **/*.js",
-    "lint:fix": "eslint **/*.js --fix"
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix"
   },
   "repository": {
     "type": "git",
