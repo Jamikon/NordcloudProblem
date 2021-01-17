@@ -1,4 +1,5 @@
 ![Tests](https://github.com/Jamikon/NordcloudProblem/workflows/Node.js%20CI%20(test)/badge.svg)
+![Lints](https://github.com/Jamikon/NordcloudProblem/workflows/Node.js%20CI%20(lint)/badge.svg)
 
 # This is a possible solution to the tech problem proposed by Nordcloud.
 
